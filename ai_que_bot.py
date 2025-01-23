@@ -19,6 +19,7 @@ class Bot:
         @self.bot.message_handler(content_types = ['text'])
         def text(message):
             if message.from_user.id != 5098568058:
-                self.bot.send_message(message.text.split(' * ')[0], message.text.split('*')[1])            else:
+                self.bot.send_message(message.text.split(' * ')[0], message.text.split('*')[1])            
+            else:
                 self.bot.send_message('5098568058', f'{message.from_user.id} * {message.text}')
 bot_instance = Bot()
