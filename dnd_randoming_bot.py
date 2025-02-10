@@ -1,7 +1,7 @@
 from random import *
 from telebot import *
 
-bot = TeleBot('7875463499:AAEfcYUvzL86jrhv4CS-GYHA05RTl-7cEuE', skip_pending = True)
+bot = TeleBot('7875463499:AAGkqkH8euAtypTt0oxuc5JE7A4UVQoHMfA', skip_pending = True)
 
 @bot.message_handler(content_types = ['text'])
 
