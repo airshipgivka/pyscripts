@@ -15,9 +15,8 @@ class Tbot:
         def text(message):
             if message.from_user.id in self.owner:
                 if message.text.lower() == 'проверка': self.bot.send_message(message.chat.id, 'К работе готов!')
-                elif message.text.lower().split()[0] == 'кубик' and len(message.text.split()) == 6: self.cube_roll(message)
                 elif message.text.lower().split()[0] == 'качество' and len(message.text.split()) == 2: self.quality_roll(message)
-
+            if message.text.lower().split()[0] == 'кубик' and len(message.text.split()) == 6: self.cube_roll(message)
     def cube_roll(self, message):
         if int(message.text.split()[1]) < 1001 and int(message.text.split()[3]) < 1001:
             answer = f'{message.from_user.first_name} {message.from_user.last_name}, вам выпадает: \n'
